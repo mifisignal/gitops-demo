@@ -13,7 +13,7 @@ spec:
         releaseName: podinfo
         valueFiles:
           - $values/apps/podinfo/values.yaml
-    - repoURL: https://github.com/\<your-username\>/gitops-demo
+    - repoURL: https://github.com/mifisignal/gitops-demo
       targetRevision: HEAD
       ref: values
   destination:
