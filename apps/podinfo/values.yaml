@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  tag: "6.0.0"
+
+ui:
+  color: "#3d6b9b"
+  message: "GitOps demo v1"
+
+resources:
+  limits:
+    memory: 128Mi
+  requests:
+    cpu: 25m
+    memory: 64Mi
