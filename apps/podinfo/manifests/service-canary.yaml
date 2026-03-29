@@ -3,6 +3,10 @@ kind: Service
 metadata:
   name: podinfo-canary
   namespace: podinfo
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9898"
+    prometheus.io/path: "/metrics"
 spec:
   ports:
     - port: 9898
