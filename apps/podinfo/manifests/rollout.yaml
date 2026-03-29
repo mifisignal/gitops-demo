@@ -22,7 +22,7 @@ spec:
             - name: PODINFO_UI_COLOR
               value: "#e8533c"
             - name: PODINFO_UI_MESSAGE
-              value: "GitOps demo v3 - canary"
+              value: "GitOps demo v2"
           resources:
             limits:
               memory: 128Mi
@@ -39,9 +39,16 @@ spec:
     canary:
       stableService: podinfo-stable
       canaryService: podinfo-canary
+      analysis:
+        templates:
+          - templateName: success-rate
+        startingStep: 2
+        args:
+          - name: service-name
+            value: podinfo-canary
       steps:
         - setWeight: 20
-        - pause: {}
+        - pause: {duration: 30s}
         - setWeight: 50
         - pause: {duration: 30s}
         - setWeight: 100
