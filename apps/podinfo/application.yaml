@@ -5,17 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-    - repoURL: https://stefanprodan.github.io/podinfo
-      chart: podinfo
-      targetRevision: "6.11.1"
-      helm:
-        releaseName: podinfo
-        valueFiles:
-          - $values/apps/podinfo/values.yaml
-    - repoURL: https://github.com/mifisignal/gitops-demo
-      targetRevision: HEAD
-      ref: values
+  source:
+    repoURL: https://github.com/mifisignal/gitops-demo
+    targetRevision: HEAD
+    path: apps/podinfo/manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: podinfo
