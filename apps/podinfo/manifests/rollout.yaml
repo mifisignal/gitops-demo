@@ -35,3 +35,13 @@ spec:
               port: 9898
             initialDelaySeconds: 5
             periodSeconds: 10
+  strategy:
+    canary:
+      stableService: podinfo-stable
+      canaryService: podinfo-canary
+      steps:
+        - setWeight: 20
+        - pause: {}
+        - setWeight: 50
+        - pause: {duration: 30s}
+        - setWeight: 100
