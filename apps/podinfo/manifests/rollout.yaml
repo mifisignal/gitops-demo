@@ -13,7 +13,7 @@ spec:
       labels:
         app: podinfo
       annotations:
-        rollout-trigger: "3"
+        rollout-trigger: "4"
     spec:
       containers:
         - name: podinfo
