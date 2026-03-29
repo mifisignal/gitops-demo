@@ -13,7 +13,7 @@ spec:
       labels:
         app: podinfo
       annotations:
-        rollout-trigger: "2"
+        rollout-trigger: "3"
     spec:
       containers:
         - name: podinfo
@@ -41,15 +41,14 @@ spec:
     canary:
       stableService: podinfo-stable
       canaryService: podinfo-canary
-      analysis:
-        templates:
-          - templateName: success-rate
-        startingStep: 2
-        args:
-          - name: service-name
-            value: podinfo-canary
       steps:
         - setWeight: 20
+        - analysis:
+            templates:
+              - templateName: success-rate
+            args:
+              - name: service-name
+                value: podinfo-canary
         - pause: {duration: 30s}
         - setWeight: 50
         - pause: {duration: 30s}
