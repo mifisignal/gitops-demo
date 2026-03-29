@@ -1,7 +1,7 @@
 replicaCount: 1
 
 ui:
-  color: "#3d6b9b"
+  color: "#77b878"
   message: "GitOps demo"
 
 resources:
