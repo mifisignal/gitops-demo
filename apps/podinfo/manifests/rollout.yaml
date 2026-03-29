@@ -15,14 +15,14 @@ spec:
     spec:
       containers:
         - name: podinfo
-          image: ghcr.io/stefanprodan/podinfo:6.3.0
+          image: ghcr.io/stefanprodan/podinfo:6.2.0
           ports:
             - containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#8b0000"
+              value: "#e8533c"
             - name: PODINFO_UI_MESSAGE
-              value: "GitOps demo v4 - bad canary"
+              value: "GitOps demo v3 - canary"
           resources:
             limits:
               memory: 128Mi
