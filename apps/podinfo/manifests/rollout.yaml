@@ -19,6 +19,8 @@ spec:
       containers:
         - name: podinfo
           image: ghcr.io/stefanprodan/podinfo:6.4.0
+          args:
+            - --level=info
           ports:
             - containerPort: 9898
           env:
