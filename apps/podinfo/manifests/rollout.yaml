@@ -18,14 +18,14 @@ spec:
     spec:
       containers:
         - name: podinfo
-          image: ghcr.io/stefanprodan/podinfo:6.4.0
+          image: ghcr.io/stefanprodan/podinfo:6.5.0
           ports:
             - containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#cfa73c"
+              value: "#fc0303"
             - name: PODINFO_UI_MESSAGE
-              value: "GitOps demo v5 - canary"
+              value: "GitOps demo v5"
             - name: PODINFO_LEVEL
               value: "debug"
           resources:
