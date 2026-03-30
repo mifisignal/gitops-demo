@@ -43,7 +43,6 @@ spec:
       canaryService: podinfo-canary
       steps:
         - setWeight: 20
-        - pause: {duration: 2m}
         - analysis:
             templates:
               - templateName: success-rate
