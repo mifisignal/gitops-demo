@@ -14,7 +14,7 @@ spec:
       labels:
         app: podinfo
       annotations:
-        rollout-trigger: "9"
+        rollout-trigger: "10"
     spec:
       containers:
         - name: podinfo
@@ -23,9 +23,9 @@ spec:
             - containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#cc99c5"
+              value: "#cfa73c"
             - name: PODINFO_UI_MESSAGE
-              value: "GitOps demo v4"
+              value: "GitOps demo v5"
           resources:
             limits:
               memory: 128Mi
