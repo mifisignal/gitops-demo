@@ -13,8 +13,6 @@ spec:
     metadata:
       labels:
         app: podinfo
-      annotations:
-        rollout-trigger: "2"    # was "1" or absent — just increment this
     spec:
       containers:
         - name: podinfo
@@ -23,7 +21,7 @@ spec:
             - containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#00ff00"
+              value: "#0000ff"
             - name: PODINFO_UI_MESSAGE
               value: "blue/green v2"
           resources:
