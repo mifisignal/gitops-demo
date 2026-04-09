@@ -23,9 +23,9 @@ spec:
             - containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#fc0303"
+              value: "#0000ff"
             - name: PODINFO_UI_MESSAGE
-              value: "GitOps demo v5"
+              value: "GitOps demo v2"
             - name: PODINFO_LEVEL
               value: "debug"
           resources:
