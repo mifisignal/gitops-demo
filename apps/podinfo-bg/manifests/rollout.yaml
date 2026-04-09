@@ -21,9 +21,9 @@ spec:
             - containerPort: 9898
           env:
             - name: PODINFO_UI_COLOR
-              value: "#fc0303"
+              value: "#00ff00"
             - name: PODINFO_UI_MESSAGE
-              value: "blue/green v1"
+              value: "blue/green v2"
           resources:
             limits:
               memory: 128Mi
