@@ -7,8 +7,8 @@ spec:
   gatewayClassName: ngrok
   listeners:
     - name: http
-      protocol: HTTP
-      port: 80
+      protocol: HTTPS
+      port: 443
       hostname: "mifi-podinfo-6d348cc7.ngrok.dev"
       allowedRoutes:
         namespaces:
